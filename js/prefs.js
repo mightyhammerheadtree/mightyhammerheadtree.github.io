@@ -1,4 +1,5 @@
 // Runs in <head> so the saved theme applies before paint.
-if (localStorage.getItem("theme") === "white") {
-  document.documentElement.classList.add("white");
+const theme = localStorage.getItem("theme");
+if (theme === "black" || theme === "white") {
+  document.documentElement.dataset.theme = theme;
 }

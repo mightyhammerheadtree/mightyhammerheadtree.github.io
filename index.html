@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&display=swap">
   <link rel="icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="stylesheet" href="/css/style.css?v=5">
   <script src="/js/prefs.js"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
       <h1>thealphaleopard</h1>
     </header>
 
-    <div class="grid">
+    <div class="grid" id="tiles">
       <a class="tile" href="/apps/">
         <span class="thumb"><img src="/images/apps.png" alt="apps"></span>
         <span class="name">apps</span>
@@ -32,5 +32,10 @@
       </a>
     </div>
   </div>
+
+  <script type="module">
+    import { home } from "/js/m3.js";
+    home();
+  </script>
 </body>
 </html>

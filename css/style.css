@@ -1,38 +1,94 @@
-/* thealphaleopard — black, white, m plus 1, lowercase, 0 radius, 0 animation */
+/* thealphaleopard — m3-svelte palette, M PLUS 1, lowercase */
+@import url("https://cdn.jsdelivr.net/npm/m3-svelte@7.2.1/package/etc/styles.css");
+@import url("https://cdn.jsdelivr.net/npm/m3-svelte@7.2.1/package/etc/recommended-styles.css");
+
+@function --m3-density(--size) {
+  result: var(--size);
+}
 
 :root {
-  --bg: #000;
-  --fg: #fff;
-  --tile: #0a0a0a;
+  color-scheme: light dark;
+}
+html[data-theme="black"] { color-scheme: dark; }
+html[data-theme="white"] { color-scheme: light; }
+
+@layer tokens {
+  :root {
+    --m3c-surface: light-dark(#f9f9f9, #131313);
+    --m3c-surface-container-lowest: light-dark(#fff, #0e0e0e);
+    --m3c-surface-container-low: light-dark(#f3f3f3, #1b1b1b);
+    --m3c-surface-container: light-dark(#eee, #1f1f1f);
+    --m3c-surface-container-high: light-dark(#e8e8e8, #2a2a2a);
+    --m3c-surface-container-highest: light-dark(#e2e2e2, #353535);
+    --m3c-on-surface: light-dark(#1b1b1b, #e2e2e2);
+    --m3c-on-surface-variant: light-dark(#474747, #c6c6c6);
+    --m3c-outline: light-dark(#777, #919191);
+    --m3c-outline-variant: light-dark(#c6c6c6, #474747);
+    --m3c-inverse-surface: light-dark(#303030, #e2e2e2);
+    --m3c-inverse-on-surface: light-dark(#f1f1f1, #303030);
+    --m3c-primary: light-dark(#000, #fff);
+    --m3c-on-primary: light-dark(#e2e2e2, #1b1b1b);
+    --m3c-primary-container: light-dark(#3b3b3b, #d4d4d4);
+    --m3c-on-primary-container: light-dark(#fff, #000);
+    --m3c-inverse-primary: light-dark(#c6c6c6, #5e5e5e);
+    --m3c-secondary: light-dark(#5e5e5e, #c6c6c6);
+    --m3c-on-secondary: light-dark(#fff, #1b1b1b);
+    --m3c-secondary-container: light-dark(#d4d4d4, #474747);
+    --m3c-on-secondary-container: light-dark(#1b1b1b, #e2e2e2);
+    --m3c-tertiary: light-dark(#3b3b3b, #e2e2e2);
+    --m3c-on-tertiary: light-dark(#e2e2e2, #1b1b1b);
+    --m3c-tertiary-container: light-dark(#747474, #919191);
+    --m3c-on-tertiary-container: light-dark(#fff, #000);
+    --m3c-error: light-dark(#ba1a1a, #ffb4ab);
+    --m3c-on-error: light-dark(#fff, #690005);
+    --m3c-error-container: light-dark(#ffdad6, #93000a);
+    --m3c-on-error-container: light-dark(#410002, #ffdad6);
+    --m3c-shadow: #000;
+    --m3c-scrim: #000;
+    --m3c-on-on-primary: light-dark(#525252, #9a9a9a);
+    --m3c-primary-container-subtle: light-dark(#dadada, #393939);
+    --m3c-on-primary-container-subtle: light-dark(#4c4c4c, #bcbcbc);
+    --m3c-secondary-container-subtle: light-dark(#dadada, #393939);
+    --m3c-on-secondary-container-subtle: light-dark(#4c4c4c, #bcbcbc);
+    --m3c-tertiary-container-subtle: light-dark(#dadada, #393939);
+    --m3c-on-tertiary-container-subtle: light-dark(#4c4c4c, #bcbcbc);
+    --m3c-error-container-subtle: light-dark(#ffcfc9, #790006);
+    --m3c-on-error-container-subtle: light-dark(#9e000b, #ffa49a);
+  }
+  :root {
+    --density: 0;
+    --m3-font: "M PLUS 1", system-ui, sans-serif;
+    --m3-shape-none: 0;
+    --m3-shape-extra-small: 4px;
+    --m3-shape-small: 8px;
+    --m3-shape-medium: 12px;
+    --m3-shape-large: 16px;
+    --m3-shape-extra-large: 28px;
+    --m3-shape-full: calc(infinity * 1px);
+    --m3-elevation-1: 0 1px 2px 0 rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15);
+    --m3-elevation-2: 0 1px 2px 0 rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15);
+    --m3-easing-fast: ease 150ms;
+    --m3-easing: ease 233ms;
+    --m3-easing-fast-spatial: ease 383ms;
+    --m3-easing-spatial: ease 450ms;
+    --m3v-background: var(--m3c-surface);
+  }
+}
+
+:root {
   --gap: 14px;
   --size: 150px;
+  --tile: var(--m3c-surface-container-low);
 }
 
-html.white {
-  --bg: #fff;
-  --fg: #000;
-  --tile: #f2f2f2;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  text-transform: lowercase;
-  color-scheme: dark;
-}
-
-html.white {
-  color-scheme: light;
-}
-
+* { box-sizing: border-box; }
+html { text-transform: lowercase; }
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: "M PLUS 1", system-ui, sans-serif;
+  background: var(--m3c-surface);
+  color: var(--m3c-on-surface);
+  font-family: var(--m3-font);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -42,35 +98,31 @@ body {
   margin: 0 auto;
   padding: 2.5rem 1.25rem 3rem;
 }
-
 header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.75rem;
 }
-
 h1 {
   margin: 0;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
+a { color: inherit; text-decoration: none; }
 
-a {
-  color: var(--fg);
-  text-decoration: none;
-}
-
-.back {
+/* M3 text button, styled like the old small back link */
+html .wrap header .back-slot > .m3-container {
+  height: auto;
+  padding: 0.15rem 0.4rem;
+  font: inherit;
   font-size: 12px;
   opacity: 0.7;
+  --shape: var(--m3-shape-full);
 }
-
-.back:hover {
-  opacity: 1;
-}
+html .wrap header .back-slot > .m3-container:hover { opacity: 1; }
 
 /* square tiles: image fills the square, name is the subtext under it */
 .grid {
@@ -78,37 +130,49 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(var(--size), 1fr));
   gap: 1.6rem var(--gap);
 }
+.tile-slot { display: block; min-width: 0; }
 
+html .grid .tile-slot > .m3-container,
 .tile {
   display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--m3c-on-surface);
+  text-align: center;
+  --shape: 0;
+  --square-shape: 0;
+  --pressed-shape: 0;
 }
-
-.tile .thumb {
+.tile-inner { display: block; }
+.thumb {
   display: grid;
   place-items: center;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--tile);
   outline: 1px solid transparent;
+  font-size: 12px;
+  color: var(--m3c-on-surface-variant);
 }
-
+.thumb.text { padding: 0.5rem; overflow-wrap: anywhere; }
 .tile img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+html .grid .tile-slot > .m3-container:hover .thumb,
+html .grid .tile-slot > .m3-container:focus-visible .thumb,
 .tile:hover .thumb,
-.tile:focus-visible .thumb {
-  outline-color: var(--fg);
-}
-
-.tile .name {
+.tile:focus-visible .thumb { outline-color: var(--m3c-on-surface); }
+.name {
   display: block;
   margin-top: 0.45rem;
   font-size: 12px;
-  text-align: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -121,40 +185,16 @@ a {
   gap: 0.5rem;
   margin-bottom: 0.75rem;
 }
-
 .row .label {
   min-width: 4.5rem;
   font-size: 12px;
-  opacity: 0.7;
+  color: var(--m3c-on-surface-variant);
 }
-
-button {
-  font: inherit;
-  text-transform: inherit;
-  color: var(--fg);
-  background: transparent;
-  border: 1px solid var(--fg);
-  padding: 0.35rem 0.8rem;
-  cursor: pointer;
-}
-
-button:hover,
-button.on {
-  background: var(--fg);
-  color: var(--bg);
-}
-
-.empty {
-  font-size: 12px;
-  opacity: 0.7;
-}
+.opt-slot { display: inline-flex; }
+html .row .opt-slot > .m3-container { font: inherit; text-transform: lowercase; }
+.empty { font-size: 12px; color: var(--m3c-on-surface-variant); }
 
 @media (max-width: 640px) {
-  :root {
-    --size: 105px;
-  }
-
-  .wrap {
-    padding: 2rem 1rem 2.5rem;
-  }
+  :root { --size: 105px; }
+  .wrap { padding: 2rem 1rem 2.5rem; }
 }
