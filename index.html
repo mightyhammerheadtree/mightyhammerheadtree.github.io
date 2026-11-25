@@ -1,41 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>thealphaleopard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&display=swap">
   <link rel="icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=6">
+  <link rel="stylesheet" href="/css/style.css?v=7">
   <script src="/js/prefs.js"></script>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>thealphaleopard</h1>
-    </header>
-
-    <div class="grid" id="tiles">
-      <a class="tile" href="/apps/">
-        <span class="thumb"><img src="/images/apps.png" alt="apps"></span>
-        <span class="name">apps</span>
-      </a>
-      <a class="tile" href="/games/">
-        <span class="thumb"><img src="/images/games.png" alt="games"></span>
-        <span class="name">games</span>
-      </a>
-      <a class="tile" href="/settings/">
-        <span class="thumb"><img src="/images/settings.png" alt="settings"></span>
-        <span class="name">settings</span>
-      </a>
-    </div>
-  </div>
-
-  <script type="module">
-    import { home } from "/js/m3.js";
-    home();
-  </script>
+<body data-title="thealphaleopard" data-list="/home.json">
+  <script type="module" src="/js/app.js"></script>
 </body>
 </html>

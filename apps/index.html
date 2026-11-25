@@ -1,29 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>apps</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&display=swap">
   <link rel="icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=6">
+  <link rel="stylesheet" href="/css/style.css?v=7">
   <script src="/js/prefs.js"></script>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>apps</h1>
-      <a class="back" href="/">back</a>
-    </header>
-
-    <div class="grid" id="list"></div>
-  </div>
-
-  <script type="module">
-    import { loadList } from "/js/m3.js";
-    loadList("/apps.json", "list");
-  </script>
+<body data-title="apps" data-back="/" data-list="/apps.json">
+  <script type="module" src="/js/app.js"></script>
 </body>
 </html>

@@ -1,17 +1,5 @@
 [
-  {
-    "name": "watch",
-    "url": "/watch/",
-    "image": "/images/watch.png"
-  },
-    {
-    "name": "m3svelte.js",
-    "url": "/m3svelte.js/",
-    "image": "/images/watch.png"
-  },
-  {
-    "name": "nanoweb",
-    "url": "/nanoweb/",
-    "image": "/images/nanoweb.png"
-  }
+  { "name": "watch", "url": "/watch/", "image": "/images/watch.png" },
+  { "name": "m3svelte.js", "url": "/m3svelte.js/", "image": "/images/watch.png" },
+  { "name": "nanoweb", "url": "/nanoweb/", "image": "/images/nanoweb.png" }
 ]
