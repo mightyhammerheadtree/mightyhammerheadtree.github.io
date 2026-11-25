@@ -4,6 +4,11 @@
     "url": "/megamix/",
     "image": "/images/megamix.png"
   },
+    {
+    "name": "sittsm",
+    "url": "/sittsm-web/",
+    "image": "/images/megamix.png"
+  },
   {
     "name": "madness melee",
     "url": "/mm/",
