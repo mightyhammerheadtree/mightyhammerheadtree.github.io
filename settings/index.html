@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&display=swap">
   <link rel="icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="stylesheet" href="/css/style.css?v=5">
   <script src="/js/prefs.js"></script>
 </head>
 <body>
@@ -25,6 +25,9 @@
     </div>
   </div>
 
-  <script src="/js/settings.js"></script>
+  <script type="module">
+    import { theme } from "/js/m3.js";
+    theme();
+  </script>
 </body>
 </html>
