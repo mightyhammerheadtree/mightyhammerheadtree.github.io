@@ -1,0 +1,5 @@
+[
+  { "name": "apps", "url": "/apps/", "image": "/images/apps.png" },
+  { "name": "games", "url": "/games/", "image": "/images/games.png" },
+  { "name": "settings", "url": "/settings/", "image": "/images/settings.png" }
+]

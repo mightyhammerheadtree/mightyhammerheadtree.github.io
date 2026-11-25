@@ -1,43 +1,10 @@
 [
-  {
-    "name": "megamix mania",
-    "url": "/megamix/",
-    "image": "/images/megamix.png"
-  },
-    {
-    "name": "sittsm",
-    "url": "/sittsm-web/",
-    "image": "/images/megamix.png"
-  },
-  {
-    "name": "madness melee",
-    "url": "/mm/",
-    "image": "/images/megamix.png"
-  },
-  {
-    "name": "stick fighter",
-    "url": "/stickfighter-rip/",
-    "image": "/images/stickfighter-rip.avif"
-  },
-  {
-    "name": "poly track",
-    "url": "/pt/",
-    "image": "/images/pt.png"
-  },
-  {
-    "name": "rounds",
-    "url": "/rnds/",
-    "image": "/images/rounds.webp"
-  },
-  {
-    "name": "fara",
-    "url": "/fara/",
-    "image": "/images/megamix.png"
-  },
-  {
-    "name": "horsey game",
-    "url": "/horsey/",
-    "image": "/images/horsey.webp"
-  }
-  
+  { "name": "megamix mania", "url": "/megamix/", "image": "/images/megamix.png" },
+  { "name": "sittsm", "url": "/sittsm-web/", "image": "/images/megamix.png" },
+  { "name": "madness melee", "url": "/mm/", "image": "/images/megamix.png" },
+  { "name": "stick fighter", "url": "/stickfighter-rip/", "image": "/images/stickfighter-rip.avif" },
+  { "name": "poly track", "url": "/pt/", "image": "/images/pt.png" },
+  { "name": "rounds", "url": "/rnds/", "image": "/images/rounds.webp" },
+  { "name": "fara", "url": "/fara/", "image": "/images/megamix.png" },
+  { "name": "horsey game", "url": "/horsey/", "image": "/images/horsey.webp" }
 ]
